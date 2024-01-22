@@ -1,0 +1,10 @@
+	sub round {
+		my ($c) = @_;
+		if(int(($c - int($c))*10) < 5) {
+			$c = int($c);
+		} else {
+			$c = int($c)+1;
+		}
+		return $c;
+	}
+

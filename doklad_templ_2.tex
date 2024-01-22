@@ -1,0 +1,43 @@
+%%% obrazek - logo %%%
+\ifpdf
+   \def\obr{\logo.jpg}
+\else   
+   \def\obr{\logo.eps}
+\fi
+%%% hlavicka %%%
+\def\hlavicka{%
+%\parpic[l][lt]%
+%{\scalebox{\meritko}{\includegraphics{\obr}}} 
+{
+%\baselineskip=11pt
+{\scriptsize \Ustav{}\\ \Adresa{}, IÈO: \Ico{} }\\
+%{\scriptsize Ièo: \Ico{} Tel: \Tel{} E-mail: \Mail{}}\\
+\mbox{}\hrulefill
+}\\
+\picskip{0}
+}
+%%%% jedno potvrzeni
+\newcommand{\obsah}[3]{
+\hlavicka{}
+{\footnotesize \textbf{Potvrzení o zaplacení}} \hfill è. \dots\dots\dots\\[2mm]
+{\large\textbf{DAÒOVÝ DOKLAD}}\\[.2cm]
+Potvrzujeme,\\
+¾e paní/pan: \hspace{1mm} #1\\
+¹kola: \hspace{10mm} #2\\[.5cm]
+se dne \datumAkce{} zúèastnil(a) vzdìlávacího programu\\[.3cm]
+{\footnotesize \textbf{\cisloAkce{} \nazevAkce{}}}\\
+%\if *\akreditace 
+\makebox{}\\[.3cm]
+%\else
+%{\footnotesize \akreditace{}}\\[.3cm]
+%\fi
+Úèastnický poplatek ve vý¹i \hspace{1cm} \textbf{= \poplatek{}}\\[.3cm]
+%(slovy: \poplatekSlovy{}) byl \textbf{uhrazen#3}\\[.3cm]
+(slovy: \poplatekSlovy{}) -- placeno bankovním pøevodem\\[.3cm]
+{V Hradci Králové dne \datumPlaceni{}\\[15mm]
+\vspace{\fill} 
+\mbox{}\hspace{3cm}\dotfill\\
+\mbox{}\hspace{5cm}razítko, podpis\\[.5cm]
+Nejsme plátci DPH.}\\
+}
+

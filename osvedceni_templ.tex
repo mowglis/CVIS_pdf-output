@@ -1,0 +1,92 @@
+%
+% osvedceni
+%
+\documentclass[a4paper,oneside,12pt]{article}
+\usepackage{czech}
+\usepackage{palatino}
+\usepackage{graphics}
+\usepackage[a4paper,lmargin=1.5cm,rmargin=1.5cm,top=1cm,nohead,bottom=0.5cm,nofoot]{geometry}
+\pagestyle{empty}
+\usepackage{picins}
+\usepackage[pdftex]{graphicx}
+\usepackage{wallpaper}
+\graphicspath{{../imgs/}}
+\input{../organizace-data.tex}
+% vars
+\def\meritko{.35}
+\def\obr{\logo.jpg}
+\def\lev{lev.jpg}
+\def\khk{\znakKHK.jpg}
+% dalsi promenne ze souboru
+\input{VARS}
+%\input{osv-vars.tex}
+% zahlavi 
+\def\hlavicka{%
+\newpage
+%\parpic[l][lt]%
+%{\scalebox{\meritko}{\includegraphics{\obr}}} 
+{
+%\baselineskip=11pt
+{\centering \bf\small \Ustav\\
+\Adresa, IÈO: \Ico\\
+Akreditace vzdìlávací instituce v systému DVPP è.j.: MSMT--24353/2019--1\\}
+%{\scriptsize Ièo: \Ico{} Tel: \Tel{} E-mail: \Mail{}}\\
+\mbox{}\hrulefill
+}\\
+\picskip{0}
+\nopagebreak[4]
+}
+% jedno osvedceni
+\newcommand{\osvedceni}[4]{
+\hlavicka{}
+\nopagebreak[4]
+\begin{center}
+\bf
+\begin{tabbing}
+\footnotesize Kód programu: \= \footnotesize \skRok \hspace{87mm}  \= \footnotesize Èíslo osvìdèení: #3  \kill
+%\footnotesize ©kolní rok: \> \footnotesize \skRok \>  \footnotesize Èíslo \MakeLowercase{\dokladTyp}: #3  \\
+%\footnotesize Kód programu: \> \footnotesize \cisloAkce \\
+\footnotesize Kód programu: \> \footnotesize \cisloAkce \> \footnotesize Èíslo \MakeLowercase{\dokladTyp}: #3  \\
+ 
+%\pololeti. pololetí
+\end{tabbing}
+% lev
+\vspace{1cm}
+\includegraphics[scale=0.5]{\khk}\\[7mm]
+%\resizebox{.4\textwidth}{10mm}{\bf \centering OSVÌDÈENÍ}\\[7mm]
+{\Huge\bf\textsc{\dokladTyp}}\\[5mm]
+%\resizebox{.8\textwidth}{4mm}{\bf \centering O ABSOLVOVÁNÍ VZDÌLÁVACÍHO PROGRAMU}\\[9mm]
+{\Large\bf\scshape \osvedceniText}\\[5mm]
+%{\druh\ dle zákona è.~563/2004~Sb. a \S~1~vyhlá¹ky~è.~317/2005~Sb.}\\[9mm]
+\if *\druh
+  \makebox{}\\
+\else
+  {\druh }\\[9mm]
+\fi
+\vfill
+Pan/paní\\[3mm]
+{\huge \textbf{#1}}\\[3mm]
+narozen(a) #2#4\\[3mm]
+\vfill
+absolvoval/a vzdìlávací program\\[5mm]
+{\Large\bf \nazevAkce}\\[5mm]
+Termín konání: \datumAkce\\
+Místo konání: \mistoAkce\\
+Èasový rozsah: \rozsahAkce\\
+\if *\akreditace 
+  \makebox{}\\
+\else
+  \vspace{3mm}
+  \footnotesize\akreditace{}\\
+\fi
+%\vspace{10mm}
+\vfill
+\normalfont\footnotesize
+\mbox{} \hfill \makebox[55mm]{\hrulefill}\\
+\datumVystaveni\ \hfill \reditel
+\logoline{}
+\end{center}
+}
+\begin{document}
+\CenterWallPaper{.8}{ve-ed}
+% tady zapsat jednotliva osvedeceni

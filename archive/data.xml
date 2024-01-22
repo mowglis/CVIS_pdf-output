@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-2" ?>
+<?xml-stylesheet href="msmt.xsl" type="text/xsl" ?>
+<data>
+<nadpis>Statistika vzdělávacích akcí - rok 2012 </nadpis>
+<datum>11. pro (Út) 2012, 10:59:32</datum>
+<tabulka>
+<nazev>Tabulka č. 1:</nazev>
+<radek><hodnota>Počet akredit. akcí platných</hodnota><hodnota_num>391</hodnota_num></radek>
+<radek><hodnota>Počet akredit. akcí, které byly nabízeny</hodnota><hodnota_num>589</hodnota_num></radek>
+<radek><hodnota> z toho počet neuskutečněných akcí</hodnota><hodnota_num>239</hodnota_num></radek>
+<radek><hodnota>Celkový počet účastníků akcí</hodnota><hodnota_num>5259</hodnota_num></radek>
+<radek><hodnota> z toho učitelů MŠ</hodnota><hodnota_num>1298</hodnota_num></radek>
+<radek><hodnota> z toho učitelů ZŠ</hodnota><hodnota_num>2347</hodnota_num></radek>
+<radek><hodnota> z toho učitelů SŠ</hodnota><hodnota_num>724</hodnota_num></radek>
+<radek><hodnota> z toho ostatní</hodnota><hodnota_num>871</hodnota_num></radek>
+</tabulka>
+<tabulka>
+<nazev>Tabulka č. 2:</nazev>
+<radek><zahlavi></zahlavi><zahlavi>Celkový počet vzd. akcí</zahlavi><zahlavi>Celkový počet hodin</zahlavi><zahlavi>Celkový počet účastníků</zahlavi><zahlavi>Celkový počet osobohodin</zahlavi></radek>
+<radek><hodnota>Jednorázové vzdělávací akce</hodnota><hodnota_num>461</hodnota_num><hodnota_num>2566</hodnota_num><hodnota_num>4875</hodnota_num><hodnota_num>33856</hodnota_num></radek>
+<radek><hodnota>Cyklické vzdělávací akce</hodnota><hodnota_num>40</hodnota_num><hodnota_num>989</hodnota_num><hodnota_num>384</hodnota_num><hodnota_num>15679</hodnota_num></radek>
+<radek><hodnota> z toho do 10 vyučovacích hodin</hodnota><hodnota_num>22</hodnota_num><hodnota_num>32</hodnota_num><hodnota_num>124</hodnota_num><hodnota_num>692</hodnota_num></radek>
+<radek><hodnota> z toho do 20 vyučovacích hodin</hodnota><hodnota_num>5</hodnota_num><hodnota_num>82</hodnota_num><hodnota_num>70</hodnota_num><hodnota_num>1202</hodnota_num></radek>
+<radek><hodnota> z toho nad 20 vyučovacích hodin</hodnota><hodnota_num>13</hodnota_num><hodnota_num>875</hodnota_num><hodnota_num>190</hodnota_num><hodnota_num>13785</hodnota_num></radek>
+<radek><hodnota>Celkem</hodnota><hodnota_num>501</hodnota_num><hodnota_num>3555</hodnota_num><hodnota_num>5259</hodnota_num><hodnota_num>49535</hodnota_num></radek>
+<radek><hodnota>akce pro vedoucí pracovníky</hodnota><hodnota_num>44</hodnota_num><hodnota_num>419</hodnota_num><hodnota_num>856</hodnota_num><hodnota_num>9625</hodnota_num></radek>
+<radek><hodnota>akce z oblasti výuky cizích jazyků</hodnota><hodnota_num>58</hodnota_num><hodnota_num>756</hodnota_num><hodnota_num>408</hodnota_num><hodnota_num>6717</hodnota_num></radek>
+<radek><hodnota>akce z oblasti výpočetní techniky, informatiky</hodnota><hodnota_num>29</hodnota_num><hodnota_num>77</hodnota_num><hodnota_num>167</hodnota_num><hodnota_num>817</hodnota_num></radek>
+<radek><hodnota>akce z oblasti psychologie</hodnota><hodnota_num>119</hodnota_num><hodnota_num>1056</hodnota_num><hodnota_num>1453</hodnota_num><hodnota_num>17746</hodnota_num></radek>
+<radek><hodnota>akce z oblasti environmentální výchovy</hodnota><hodnota_num>2</hodnota_num><hodnota_num>23</hodnota_num><hodnota_num>24</hodnota_num><hodnota_num>380</hodnota_num></radek>
+<radek><hodnota>akce z oblasti multikulturní výchovy</hodnota><hodnota_num></hodnota_num><hodnota_num></hodnota_num><hodnota_num></hodnota_num><hodnota_num></hodnota_num></radek>
+<radek><hodnota>akce z oblasti humanitních oborů</hodnota><hodnota_num>38</hodnota_num><hodnota_num>165</hodnota_num><hodnota_num>343</hodnota_num><hodnota_num>1793</hodnota_num></radek>
+<radek><hodnota>akce z oblasti přírodních věd</hodnota><hodnota_num>31</hodnota_num><hodnota_num>153</hodnota_num><hodnota_num>296</hodnota_num><hodnota_num>1696</hodnota_num></radek>
+<radek><hodnota>akce z oblasti výchov</hodnota><hodnota_num>84</hodnota_num><hodnota_num>435</hodnota_num><hodnota_num>508</hodnota_num><hodnota_num>3215</hodnota_num></radek>
+<radek><hodnota>akce z oblasti předškolní výchovy</hodnota><hodnota_num>47</hodnota_num><hodnota_num>251</hodnota_num><hodnota_num>676</hodnota_num><hodnota_num>3646</hodnota_num></radek>
+<radek><hodnota>akce z ostatních oblastí</hodnota><hodnota_num>49</hodnota_num><hodnota_num>220</hodnota_num><hodnota_num>528</hodnota_num><hodnota_num>3900</hodnota_num></radek>
+</tabulka>
+</data>

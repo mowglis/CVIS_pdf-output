@@ -1,0 +1,108 @@
+\documentclass[a4paper,10pt]{article}
+\pagestyle{empty}
+%\usepackage{palatino}
+\usepackage{czech}
+\usepackage[a4paper,left=1cm,right=1cm,nohead,nofoot,top=0.7cm,bottom=1cm]{geometry}
+\usepackage{picins}
+%\newif\ifpdf
+%\ifx\pdfoutput \undefined
+%   \pdffalse
+%\else
+%   \pdfoutput=1
+%   \pdftrue
+%\fi   
+%\ifpdf 
+   \usepackage[pdftex]{graphicx}
+%\else 
+%   \usepackage{graphicx}
+%\fi
+\graphicspath{{../imgs/}}
+%\input psfig.sty
+\newcommand{\Nadpis}[1]{{\bfseries #1}}
+\newcommand{\BigNadpis}[1]{{\bfseries\LARGE #1}}
+\newcommand{\TerminFmt}[1]{\makebox[5mm]{}{\bfseries #1}}
+\newcommand{\TabFont}[1]{{\scriptsize #1}}
+%\renewcommand{\baselinestretch}{0.9}
+% definice vety z databaze
+\input{../defrec.tex}
+%%%%%%%%%%%%%%%%%%%%%%%  definice vlastni sestavy %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\body{%
+\def\logo{../cvkhk_logo}
+\def\meritko{1}
+\unitlength=1mm
+\renewcommand{\arraystretch}{1.2}
+%\ifpdf
+   \def\obr{\logo.jpg}
+%\else   
+%   \def\obr{\logo.eps}
+%\fi
+%\parpic[l][lt]%
+%{\scalebox{\meritko}{\includegraphics{\obr}}}  
+{
+%\baselineskip=11pt
+\centering
+\resizebox{16cm}{4mm}{\sc\large ©kolské zaøízení pro dal¹í vzdìlávání pedagogických pracovníkù Královéhradeckého kraje}\\
+{\footnotesize \Adresa{}}\\
+{\scriptsize TEL: \Tel{}\hfill FAX: \Fax{}\hfill IÈO: \Ico{}\hfill E-MAIL: \Mail{}\hfill WEB: \Web{}}\\
+\mbox{}\hrulefill
+}\\[7mm]
+\picskip{0}
+% telo stranky
+%\baselineskip 12pt
+{\small
+Vá¾ená paní kolegynì, vá¾ený pane kolego,
+
+\noindent
+dovolujeme si Vás pozvat na vzdìlávací akci è. {\bfseries\Akce{}}, která je urèena {\bfseries\Urceno{}}
+\begin{center}\BigNadpis{\Nazev{}}\end{center}
+\begin{itemize}
+\item \Nadpis{Termín a místo konání:} \itemsep=0pt\par
+%   \parskip=0pt
+   \topsep=0pt 
+   \partopsep=0pt
+%   \begin{center}
+   \Termin{}
+%   \end{center}
+\item \Nadpis{Obsah:} \Popis{}
+\item \Nadpis{Lektor:} \Lektor{} 
+\item \Nadpis{Garant programu:} \Garant{}
+\item \Nadpis{Úèastnický poplatek:} 
+\if *\Poplatek{} -- bez poplatku -- \else \Poplatek{} - platbu je mo¾né provést  v hotovosti pøi prezenci, bankovním pøevodem nejpozdìji do dne uzávìrky pøihlá¹ek (èíslo úètu: \textbf{8195410267/0100}, 
+variabilní symbol: \textbf{\Vs{}}, specifický symbol: datum narození DDMMRRRR), pøípadnì po¾ádat o fakturaci. Pøi neúèasti nebo pøi zru¹ení úèasti po uzávìrce bude pøihlá¹eným vyúètován poplatek ve vý¹i vlo¾ného 
+(pøípadnì lze vyslat náhradníka). Kopii výpisu z úètu pøineste s sebou.\fi
+\if *\Uzaverka{} \else \item \Nadpis{Uzávìrka pøihlá¹ek:} \Uzaverka{}\fi
+\if *\Akreditace{} \else \item \Nadpis{\Akreditace{}}.\fi
+\if *\Spojeni{} \else \item \Nadpis{Doporuèené spojení:} \Spojeni{}.\fi
+\if *\Poznamka{} \else \item \Nadpis{Poznámka:} \Poznamka{}.\fi
+\end{itemize}
+}
+\begin{center}
+{\small Zaøazení na akci nepotvrzujeme - pokud zájemci neobdr¾í dal¹í sdìlení, je závaznì poèítáno s jejich úèastí!}
+\vfill
+% ***************** tabulka pro prihlasku **********************
+\begin{tabular}[c]{|p{80mm}|p{40mm}|p{50mm}|}\hline
+\multicolumn{3}{|c|}{\bfseries Závazná pøihlá¹ka na vzdìlávací akci èíslo \Akce{}}\\ 
+\multicolumn{3}{|c|}{\TabFont{\bfseries \Nazev}}\\ 
+\multicolumn{3}{|l|}{\TabFont{{\bfseries Termín akce:} \TerminTab{}}}\\ \hline
+\multicolumn{2}{|l|}{\TabFont{Jméno a pøíjmení, titul:}}&\TabFont{Datum a místo narození:}\\
+\multicolumn{2}{|l|}{\mbox{}}&\mbox{}\\ \hline
+\TabFont{Název ¹koly (vè. PSÈ):}&\TabFont{IÈO ¹koly:}&\TabFont{Telefon, E-mail:}\\
+\mbox{}&\mbox{}&\mbox{}\\ \hline
+\multicolumn{2}{|l|}{\TabFont{Adresa bydli¹tì (vè. PSÈ):}}&\TabFont{Telefon, E-mail:}\\
+\multicolumn{2}{|l|}{\mbox{}}&\mbox{}\\ \hline
+\multicolumn{3}{|l|}{\TabFont{Zpùsob platby:\hspace{2cm} a) v hotovosti \hspace{2cm} b) bankovní pøevod (pøedem)\hspace{2cm} c) fakturace (pøedem)}}\\ \hline
+\end{tabular}
+\end{center}
+{\scriptsize %
+\textbullet\ Pokud nevyplníte datum narození, riskujete, ¾e nebude správnì identifikována Va¹e platba\\
+\textbullet\ Potvrzujeme, ¾e jsme se seznámili s platnými Podmínkami pro pøihla¹ování a úèast na vzdìlávacích programech a souhlasíme s nimi. Bereme zejména na vìdomí, ¾e jsme v pøípadì neúèasti nebo zru¹ení pøihlá¹ky po uzávìrce povinni uhradit stanovený úèastnický poplatek v plné vý¹i.\\[4mm]
+\noindent
+V \dotfill \hspace{3cm}dne \dotfill
+
+\noindent
+Souhlas vedení ¹koly (podpis, razítko):\hfill Podpis pøihlá¹eného:
+}
+\Logoline{}
+}
+\hyphenation{©tef-co-va bio-logic-ké-ho tsche-chische Fertig-keiten Denisova geo-met-rie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,27 @@
+%
+% doklad o zaplaceni - template
+%
+\documentclass[a4paper,oneside,10pt]{article}
+\usepackage{czech}
+%\usepackage{palatino}
+\usepackage{graphics}
+\usepackage[a4paper,lmargin=1cm,rmargin=1cm,top=.7cm,nohead,bottom=5mm,nofoot]{geometry}
+\pagestyle{empty}
+\usepackage{picins}
+\newif\ifpdf
+\ifx\pdfoutput \undefined
+   \pdffalse
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi   
+\ifpdf 
+   \usepackage[pdftex]{graphicx}
+\else 
+   \usepackage{graphicx}
+\fi
+\input{../organizace-data.tex}
+
+\def\meritko{1}
+% dalsi promenne
+

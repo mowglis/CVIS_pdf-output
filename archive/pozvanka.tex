@@ -1,0 +1,110 @@
+\documentclass[a4paper,10pt]{article}
+\pagestyle{empty}
+%\usepackage{palatino}
+\usepackage{czech}
+\usepackage[a4paper,left=1cm,right=1cm,nohead,nofoot,top=0.7cm,bottom=1cm]{geometry}
+\usepackage{picins}
+\newif\ifpdf
+\ifx\pdfoutput \undefined
+   \pdffalse
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi   
+\ifpdf 
+   \usepackage[pdftex]{graphicx}
+\else 
+   \usepackage{graphicx}
+\fi
+
+%\input psfig.sty
+\newcommand{\Nadpis}[1]{{\bfseries #1}}
+\newcommand{\BigNadpis}[1]{{\bfseries\LARGE #1}}
+\newcommand{\TerminFmt}[1]{\makebox[2cm]{}{\bfseries #1}}
+\newcommand{\TabFont}[1]{{\scriptsize #1}}
+%\renewcommand{\baselinestretch}{0.9}
+% definice vety z databaze
+\input{defrec.tex}
+%%%%%%%%%%%%%%%%%%%%%%%  definice vlastni sestavy %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\body{%
+\def\logo{pgchk_logo}
+\def\meritko{1}
+\unitlength=1mm
+\renewcommand{\arraystretch}{1.2}
+\ifpdf
+   \def\obr{\logo.jpg}
+\else   
+   \def\obr{\logo.eps}
+\fi
+\parpic[l][lt]%
+{\scalebox{\meritko}{\includegraphics{\obr}}} 
+{
+%\baselineskip=11pt
+\centering
+\resizebox{16cm}{4mm}{\sc\large Pedagogické centrum Hradec Králové}\\
+{\footnotesize \Adresa{}}\\
+{\scriptsize TEL: \Tel{}\hfill FAX: \Fax{}\hfill IÈO: \Ico{}\hfill E-MAIL: \Mail{}\hfill WEB: \Web{}}\\
+\mbox{}\hrulefill
+}\\[7mm]
+\picskip{0}
+% telo stranky
+%\baselineskip 12pt
+{\small
+Vá¾ená paní kolegynì, vá¾ený pane kolego,
+
+\noindent
+dovolujeme si Vás pozvat na vzdìlávací akci è. {\bfseries\Akce{}}, která je urèena {\bfseries\Urceno{}}
+\begin{center}\BigNadpis{\Nazev{}}\end{center}
+\begin{itemize}
+\item \Nadpis{Termín a místo konání:} \itemsep=0pt\par
+%   \parskip=0pt
+   \topsep=0pt 
+   \partopsep=0pt
+%   \begin{center}
+   \Termin{}
+%   \end{center}
+\item \Nadpis{Obsah:} \Popis{}
+\item \Nadpis{Lektor:} \Lektor{} 
+\item \Nadpis{Garant programu:} \Garant{}
+\item \Nadpis{Úèastnický poplatek:} Úèastnický poplatek\ \Poplatek{} uhraïte nejpozdìji do\ \Uzaverka{} na úèet 8195410267/0100, 
+variabilní symbol:\ \Akce{}, specifický symbol Va¹e datum narození, pøípadnì si na adrese brzakova@cvkhk.cz po¾ádejte o fakturaci.
+\item \Nadpis{Uzávìrka pøihlá¹ek:} \Uzaverka{}
+\if *\Akreditace{} \else \item \Nadpis{Program byl akreditován M©MT ÈR} (\Akreditace{}).\fi
+\if *\Spojeni{} \else \item \Nadpis{Doporuèené spojení:} \Spojeni{}.\fi
+\if *\Poznamka{} \else \item \Nadpis{Poznámka:} \Poznamka{}.\fi
+\end{itemize}
+}
+\begin{center}
+{\small Zaøazení na akci nepotvrzujeme - pokud zájemci neobdr¾í dal¹í sdìlení, je závaznì poèítáno s jejich úèastí!}
+\vfill
+% ***************** tabulka pro prihlasku **********************
+\begin{tabular}[c]{|p{80mm}|p{40mm}|p{50mm}|}\hline
+\multicolumn{3}{|c|}{\bfseries Závazná pøihlá¹ka na vzdìlávací akci èíslo \Akce{}}\\ 
+\multicolumn{3}{|l|}{\TabFont{{\bfseries Oznaète vybraný termín:} \TerminTab{}}}\\ \hline
+\multicolumn{2}{|l|}{\TabFont{Jméno a pøíjmení:}}&\TabFont{Rodné èíslo:}\\
+\multicolumn{2}{|l|}{\mbox{}}&\mbox{}\\ \hline
+\TabFont{Název ¹koly (vè. PSÈ):}&\TabFont{IZO ¹koly:}&\TabFont{Telefon, E-mail:}\\
+\mbox{}&\mbox{}&\mbox{}\\ \hline
+\multicolumn{2}{|l|}{\TabFont{Adresa bydli¹tì (vè. PSÈ):}}&\TabFont{Telefon, E-mail:}\\
+\multicolumn{2}{|l|}{\mbox{}}&\mbox{}\\ \hline
+\end{tabular}
+\end{center}
+{\scriptsize %
+\textbullet\ Pokud nevyplníte rodné èíslo, riskujete, ¾e nebude správnì identifikována Va¹e platba\\
+\textbullet\ Pøi neúèasti nebo zru¹ení úèasti po uzávìrce se zavazujeme uhradit stornopoplatek ve vý¹i se vlo¾ného.\\
+\textbullet\ Vyplnìním pøihlá¹ky souhlasím se zavedením do evidence úèastníkù vzdìlávacích akcí PgC v Hradci Králové (podle zák. è. 101/2000 Sb.).\\[.5cm]
+
+\noindent
+V \dotfill \hspace{3cm}dne \dotfill
+
+\noindent
+Souhlas vedení ¹koly (podpis, razítko):\hfill Podpis pøihlá¹eného:
+}
+}
+\hyphenation{©tef-co-va bio-logic-ké-ho tsche-chische Fertig-keiten Denisova geo-met-rie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\sf
+\def\done{\body}
+\input{data_pozv.tex}
+\end{document}
